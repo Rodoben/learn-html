@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Strings</h1>
+<h2>The Search Methods</h2>
+
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo8"></p>
+<p id="demo9"></p>
+<p id="demo10"></p>
+<p id="demo11"></p>
+<p id="demo12"></p>
+<p id="demo13"></p>
+<p id="demo14"></p>
+<p id="demo15"></p>
+<p id="demo16"></p>
+<p id="demo17"></p>
+<p id="demo18"></p>
+<p id="demo19"></p>
+
+<script>
+let text = "Please locate where 'locate' occurs!";
+let index = text.indexOf("locate");
+document.getElementById("demo").innerHTML = "indexOf "+ index; 
+
+index = text.lastIndexOf("locate");
+document.getElementById("demo1").innerHTML = "lastIndexOf "+ index; 
+
+index = text.lastIndexOf("John");
+document.getElementById("demo3").innerHTML = "lastIndexOf "+ index; 
+
+index = text.indexOf("locate", 15);
+document.getElementById("demo4").innerHTML = "indexOf with second param "+ index; 
+
+index = text.lastIndexOf("locate", 15);
+document.getElementById("demo5").innerHTML = "lastIndexOf with second param "+ index; 
+
+
+index=text.search("locate");
+document.getElementById("demo6").innerHTML = "search method "+ index; 
+
+text = "The rain in SPAIN stays mainly in the plain";
+let result = text.match("ain");
+document.getElementById("demo7").innerHTML = "match method "+ result; 
+
+
+result = text.match(/ain/g);
+document.getElementById("demo8").innerHTML = "match method "+ result; 
+
+result = text.match(/ain/gi);
+document.getElementById("demo9").innerHTML = "match method "+ result; 
+
+let iterator = text.matchAll("ain");
+document.getElementById("demo10").innerHTML = "matchAll method "+ iterator; 
+
+document.getElementById("demo11").innerHTML = "matchAll method "+ Array.from(iterator); 
+
+
+result = text.includes("world");
+document.getElementById("demo12").innerHTML = "includes method "+ result; 
+
+result = text.includes("rain");
+document.getElementById("demo13").innerHTML = "includes method "+ result; 
+
+result = text.includes("rain",15);
+document.getElementById("demo14").innerHTML = "includes method "+ result; 
+
+
+result = text.startsWith("Hello");
+document.getElementById("demo15").innerHTML = "startsWith method "+ result; 
+
+result = text.startsWith("The");
+document.getElementById("demo16").innerHTML = "startsWith method "+ result; 
+
+
+result = text.startsWith("rain", 3)
+document.getElementById("demo17").innerHTML = "startsWith method "+ result; 
+
+result = text.endsWith("plain");
+document.getElementById("demo18").innerHTML = "endsWith method "+ result; 
+
+result = text.endsWith("in",11);
+document.getElementById("demo19").innerHTML = "endsWith method "+ result; 
+</script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Modules</h1>
+
+<p id="demo"></p>
+
+<script type="module">
+import { name, age } from "http://127.0.0.1:8080/person.js";
+import { message} from "http://127.0.0.1:8080/message.js";
+
+let text = "My name is " + name + ", I am " + age + ".";
+
+document.getElementById("demo").innerHTML = text;
+document.getElementById("demo").innerHTML = message();
+</script>
+
+</body>
+</html>

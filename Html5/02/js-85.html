@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Window Location Object</h1>
+<h2>The search Property</h2>
+
+<p><a id="id" href="https://www.localhost.com/?answer=yes">
+https://www.localhost.com/?answer=yes</a></p>
+
+<p id="demo"></p>
+
+<script>
+let anchor = document.getElementById("id");
+let query = anchor.search;
+
+document.getElementById("demo").innerHTML = "The query portion of the URL is: " + query;
+</script>
+
+</body>
+</html>

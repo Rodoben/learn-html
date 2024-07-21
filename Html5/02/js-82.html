@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Console Object</h1>
+<h2>The group() Method</h2>
+<p>Remember to open the console (Press F12) before you click "Run".</p>
+
+<script>
+console.log("Hello world!");
+console.group();
+console.log("Hello again, this time inside a group!");
+console.log("Hello again, this time inside the same group!");
+console.groupCollapsed()
+console.log("Hello again, this time inside the collapsed group!");
+console.log("Hello again, this time inside the same collapsed group!");
+console.groupEnd();
+console.log("Hello again, this time after a group!");
+console.groupEnd();
+console.log("Hello again, this time after all group closed!");
+</script>
+
+</body>
+</html>

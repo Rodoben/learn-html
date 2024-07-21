@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Strings</h1>
+<h2>The length Property</h2>
+
+<p>The length of the string is:</p>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+
+
+
+
+
+
+
+<button onclick="myFunction()">Try it</button>
+
+
+<button onclick="myFunction2()">Try it all</button>
+
+<p id="demo8">Please visit Josephs and Josephs!</p>
+
+<p id="demo9">Please visit Josephs and Josephs!</p>
+
+<p id="demo10">Test</p>
+<p id="demo11">Test</p>
+<p id="demo12">Test</p>
+<p id="demo13">Test</p>
+<p id="demo14">Test</p>
+<p id="demo15">Test</p>
+<p id="demo16">Test</p>
+<p id="demo17">Test</p>
+<p id="demo18">Test</p>
+<p id="demo19">Test</p>
+<p id="demo20">Test</p>
+
+<script>
+function myFunction() {
+  let text = document.getElementById("demo8").innerHTML; 
+  document.getElementById("demo8").innerHTML =
+  text.replace("Josephs","Christ");
+}
+
+function myFunction2() {
+  let text = document.getElementById("demo9").innerHTML; 
+  document.getElementById("demo9").innerHTML =
+  text.replace(/Josephs/g,"Christ");
+}
+</script>
+
+<script>
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("demo").innerHTML = text.length;
+
+
+text = "Apple, Banana, Kiwi";
+
+// let part = text.slice(7,13);
+// document.getElementById("demo1").innerHTML = part; 
+
+//  part = text.slice(-7);
+// document.getElementById("demo2").innerHTML = part; 
+
+
+// part = text.slice(-12, -6);
+// document.getElementById("demo3").innerHTML = part; 
+
+
+//check with negative values
+// part = text.substring(-7);
+// document.getElementById("demo4").innerHTML = part; 
+
+ let part = text.slice(7,13);
+  part = text.substr(7, 6);
+  document.getElementById("demo5").innerHTML = part; 
+
+  part = text.substr(-7);
+  document.getElementById("demo6").innerHTML = part; 
+
+  let text1 = "Hello World!";
+ let text2 = text1.toUpperCase();
+ document.getElementById("demo10").innerHTML = text2; 
+  text2 = text1.toLowerCase();
+ document.getElementById("demo11").innerHTML = text2; 
+
+
+
+let a = "Hello";
+let b = "World";
+let c = a.concat(" ", b);
+document.getElementById("demo12").innerHTML = c; 
+
+
+
+text1 = "       Hello World!";
+document.getElementById("demo13").innerHTML = text1.trim(); 
+
+
+text1 = "       Hello World!           ";
+document.getElementById("demo14").innerHTML = text1.trimStart(); 
+
+ text1 = "        Hello World!     ";
+ text2 = text1.trimStart();
+
+document.getElementById("demo15").innerHTML =
+"Length text1 = " + text1.length + "<br>Length text2 = " + text2.length;
+
+
+text = "5";
+text = text.padStart(4,"0");
+
+document.getElementById("demo16").innerHTML = text;
+
+text = "5";
+text = text.padEnd(4,"x");
+document.getElementById("demo17").innerHTML = text;
+
+text1 = "Hello World!";
+let char = text1.charAt(30);
+document.getElementById("demo18").innerHTML = char;
+
+text1 = "aello World!";
+char = text1.charCodeAt(0);
+document.getElementById("demo19").innerHTML = char;
+
+
+text = "a|b|c,d,e,f";
+const myArray = text.split(",");
+document.getElementById("demo20").innerHTML = myArray.length +" "+ myArray[0];
+</script>
+
+</body>
+</html>

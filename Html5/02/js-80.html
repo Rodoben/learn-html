@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>The Element Object</h1>
+<h2>The lastChild Property</h2>
+<div id="container1">
+<ul id="myList"><li>Coffee</li><li>Tea</li></ul>
+<p>something</p>
+<input type="text"/>
+</div>
+<p>The HTML content of the list's last child node is:</p>
+<p id="demo"></p>
+
+<script>
+let text = document.getElementById("myList").nextSibling.innerHTML;
+document.getElementById("demo").innerHTML = text;
+</script>
+
+</body>
+</html>

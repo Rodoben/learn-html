@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Demo JavaScript in Body</h2>
+
+<p id="demo">A Paragraph.</p>
+
+<button type="button" onclick="functionScoped()">Try it</button>
+<br/>
+
+<button type="button" onclick="blockScoped()">Try it</button>
+<br/>
+
+<button type="button" onclick="redeclareVar()">Try it</button>
+<br/>
+
+<button type="button" onclick="redeclareLet()">Try it</button>
+<br/>
+
+
+<button type="button" onclick="changeValueVar()">Try it</button>
+<br/>
+
+<button type="button" onclick="differentValueLet()">Try it</button>
+<br/>
+
+
+<button type="button" onclick="changesInLoop()">Try it</button>
+<br/>
+
+
+
+<button type="button" onclick="noChangesInLoop()">Try it</button>
+<br/>
+
+
+
+
+<button type="button" onclick="hoistingVar()">Try it</button>
+<br/>
+
+
+
+<button type="button" onclick="hoistingLet()">Try it</button>
+<br/>
+
+<script>
+// program to print text
+// variable a cannot be used here
+function functionScoped() {
+    // variable a can be used here
+    var a = 'hello';
+    console.log(a);
+}
+// variable a cannot be used here
+
+
+// program to print the text
+// variable a cannot be used here
+function blockScoped() {
+    let a = 'hello';
+
+    // variable b cannot be used here
+    if(a == 'hello'){
+        // variable b can be used here
+        let b = 'world';
+        console.log(a + ' ' + b);
+    }
+
+     // variable b cannot be used here
+    console.log(a + ' ' + b); // error
+}
+// variable a cannot be used here
+
+
+
+function redeclareVar() {
+    var a = 5; // 5
+var a = 3; // 3
+console.log(a);
+}
+
+
+function redeclareLet() {
+    let a = 5;
+let a = 3; // error 
+}
+
+function changeValueVar() {
+    var a = 5;
+console.log(a); // 5
+{
+    var a = 3;
+    console.log(a); // 3
+}
+console.log(a); // 3
+    
+}
+
+function differentValueLet() {
+let a = 5;
+console.log(a); // 5
+{
+    let a = 3;
+    console.log(a); // 3
+}
+console.log(a); // 5
+}
+
+
+function changesInLoop(){
+    var a = 2;
+for(var a = 0; a < 3; a++) {
+    console.log('hello');
+}
+console.log(a); // 3
+}
+
+function noChangesInLoop(){
+let a = 2;
+for(let a = 0; a < 3; a++) {
+    console.log('hello');
+}
+console.log(a); // 2
+}
+
+function hoistingVar(){
+    console.log(a);
+var a; // undefined (not an error)
+}
+
+function hoistingLet(){
+    console.log(a);
+let a; // Uncaught ReferenceError: a is not defined
+}
+
+</script>
+
+
+</body>
+</html> 

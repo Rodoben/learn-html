@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript Get History Length</title>
+</head>
+<body>
+    <script>
+    function getViews() {
+        alert("You've accessed " + history.length + " web pages in this session.");
+    }
+    function goBack() {
+            window.history.back();
+        }
+        function goForward() {
+    window.history.forward();
+}
+function go() {
+    window.history.go(-1);
+}
+
+
+// window.history.go(-2);  // Go back two pages
+// window.history.go(-1); // Go back one page
+// window.history.go(0);  // Reload the current page
+// window.history.go(1);  // Go forward one page
+// window.history.go(2);  // Go forward two pages
+    </script>
+     
+    <button type="button" onclick="getViews();">Get Views Count</button>
+     <button type="button" onclick="goBack();">Go Back</button>
+     <button type="button" onclick="goForward();">Go Forward</button>
+     <button type="button" onclick="go();">Go </button>
+</body>
+</html>

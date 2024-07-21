@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Regular Expressions</h2>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+
+<script>
+function init() {
+  var name = "Hello From outside"; // name is a local variable created by init
+  function displayName() {
+    var inside = "Hello From inside"; 
+    // displayName() is the inner function, that forms the closure
+    console.log(name); // use variable declared in the parent function
+    document.getElementById("demo").innerHTML = name
+  }
+  document.getElementById("demo1").innerHTML = inside
+  displayName();
+}
+init();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<h2>The reduceRight() Method</h2>
+
+<p>Find the sum of all numbers in an array:</p>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+
+<script>
+const numbers = [45, 4, 9, 16, 25];
+let sum = numbers.reduce(myFunction);
+
+
+function myFunction(total, value, index, array) {
+  return total + value;
+}
+
+
+sum = numbers.reduce(myFunction, 100);
+
+document.getElementById("demo1").innerHTML = "The sum is " + sum;
+
+function myFunction(total, value) {
+  return total + value;
+}
+
+var arr = ["1", "2", "3", "4", "5"];
+
+total1 = arr.reduce(function(prev, cur) {
+    return prev + cur;
+});
+
+total2 = arr.reduceRight(function(prev, cur) {
+    return prev + cur;
+});
+
+document.getElementById("demo").innerHTML = "Total " + total1;
+document.getElementById("demo1").innerHTML = "Total " + total2;
+console.log(total1); // => 12345
+console.log(total2); // => 54321
+</script>
+
+</body>
+</html>

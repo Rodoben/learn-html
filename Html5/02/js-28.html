@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Template</h2>
+<p>Template literals are not supported in Internet Explorer.</p>
+
+<p>With back-ticks, you can use both single and double quotes inside a string:</p>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+
+<script>
+let text = `He's often called "Richard"`;
+document.getElementById("demo").innerHTML = text;
+
+
+//interpolation {...}
+let str = "I am a value in a variable"; 
+let newStr = `This string contains a variable that is 
+interpolated into the template literal: ${str}.`;
+document.getElementById("demo1").innerHTML = newStr;
+
+
+let firstName = "James";
+let lastName = "Bond";
+
+text = `Welcome ${firstName}, ${lastName}!`;
+document.getElementById("demo2").innerHTML = text;
+
+let price = 10;
+let VAT = 0.25;
+let something = (price * (1 + VAT)).toFixed(2)
+"Total:"+something
+let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
+document.getElementById("demo3").innerHTML = total;
+
+let header = "Dynamic Html";
+let tags = ["Item1", "Item2", "Item3"];
+
+let html = `<h2>${header}</h2><ul>`;
+
+for (const x of tags) {
+  html += `<li>${x}</li>`;
+}
+
+html += `</ul>`;
+document.getElementById("demo4").innerHTML = html;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!-- EPSILON	The difference between 1 and the smallest number > 1.
+MAX_VALUE	The largest number possible in JavaScript
+MIN_VALUE	The smallest number possible in JavaScript
+MAX_SAFE_INTEGER	The maximum safe integer (253 - 1)
+MIN_SAFE_INTEGER	The minimum safe integer -(253 - 1)
+POSITIVE_INFINITY	Infinity (returned on overflow)
+NEGATIVE_INFINITY	Negative infinity (returned on overflow)
+NaN	A "Not-a-Number" value -->
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Numbers</h1>
+
+<p>The difference between 1 and the smallest floating point number greater than 1, in JavaScript is:</p>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo8"></p>
+<p id="demo9"></p>
+<p id="demo10"></p>
+
+<script>
+let x = Number.EPSILON;
+document.getElementById("demo").innerHTML = x;
+x = Number.MAX_VALUE
+document.getElementById("demo1").innerHTML = x;
+x= Number.MIN_VALUE;
+document.getElementById("demo2").innerHTML = x;
+x= Number.MAX_SAFE_INTEGER;
+document.getElementById("demo3").innerHTML = x+999999999999999999999999;
+
+x= Number.MIN_SAFE_INTEGER;
+document.getElementById("demo4").innerHTML = x;
+
+x = Number.POSITIVE_INFINITY;
+document.getElementById("demo5").innerHTML = x;
+
+x = Number.NEGATIVE_INFINITY;
+document.getElementById("demo6").innerHTML = x;
+
+x = 1 / 0;
+document.getElementById("demo7").innerHTML = x;
+
+x = -1 / 0;
+document.getElementById("demo8").innerHTML = x;
+
+x = 100 / "Apple";
+document.getElementById("demo9").innerHTML = x;
+
+x=Math.pow(0.05,Number.NEGATIVE_INFINITY)
+document.getElementById("demo10").innerHTML = x;
+</script>
+
+</body>
+</html>

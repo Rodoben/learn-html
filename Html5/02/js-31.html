@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1> 
+
+<p id="demo"></p>
+
+<p id="demo1"></p>
+
+<p id="demo2"></p>
+
+<p id="demo3"></p>
+
+<p id="demo4"></p>
+
+<p id="demo5"></p>
+<p id="demo11"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+<p id="demo8"></p>
+<p id="demo9"></p>
+<p id="demo10"></p>
+<p id="demo12"></p>
+<p id="demo13"></p>
+<p id="demo14"></p>
+<p id="demo15"></p>
+<p id="demo16"></p>
+<p id="demo17"></p>
+<p id="demo18"></p>
+<p id="demo19"></p>
+<p id="demo20"></p>
+<p id="demo21"></p>
+<p id="demo22"></p>
+<p id="demo23"></p>
+<p id="demo24">goyalla</p>
+
+
+<script>
+let fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.toString();
+
+function myFunction(){
+    document.getElementById("demo1").innerHTML = "MyFunction";
+}
+
+function myCars(){
+    document.getElementById("demo2").innerHTML = "Mycars";
+}
+
+
+let myArray = ["1", "2", "3"];
+
+myArray[0] = Date.now();
+myArray[1] = myFunction();
+myArray[2] = myCars();
+
+
+let fLen = myArray.length;
+
+
+for (let i = 0; i < fLen; i++) {
+    document.getElementById("demo3").innerHTML = myArray[0];
+    if (i===1 || i===2){
+        myArray[i];
+    }
+}
+
+document.getElementById("demo4").innerHTML = fruits.sort();
+
+
+let cars = ["Maruti", "Kia", "BMW", "Audi"];
+let text = "<ol>";
+cars.forEach(print);
+text += "</ol>";
+
+function print(value, index) {
+ console.log(index)
+  text += "<li>" + value + "</li>";
+}
+console.log(text)
+
+document.getElementById("demo5").innerHTML = text;
+
+document.getElementById("demo11").innerHTML = fruits.push("Lemon"); 
+document.getElementById("demo6").innerHTML = fruits.toString();
+
+
+
+fruits[fruits.length] = "Guava";
+document.getElementById("demo7").innerHTML = fruits.toString();
+
+fruits[12] = "Kiwi";
+document.getElementById("demo8").innerHTML = fruits.toString();
+
+document.getElementById("demo9").innerHTML = fruits.pop();
+document.getElementById("demo10").innerHTML = fruits;
+
+
+document.getElementById("demo12").innerHTML = fruits.shift();
+document.getElementById("demo13").innerHTML = fruits.shift();
+
+document.getElementById("demo14").innerHTML = fruits.unshift("Gooseberry");
+document.getElementById("demo15").innerHTML = fruits;
+
+delete fruits[0];
+document.getElementById("demo16").innerHTML = fruits;
+
+const number1 = [1, 2];
+const number2 = [3,4,5];
+const number3 = [6,7,8];
+document.getElementById("demo17").innerHTML = number1.concat(number2);
+
+document.getElementById("demo18").innerHTML = number1.concat(number2,number3);
+
+const notFlat = [[1,2],[3,4],[5,6]];
+document.getElementById("demo19").innerHTML = notFlat.flat();
+
+const alpha = ["c","d"];
+alpha.splice(0, 0, "a", "b");
+document.getElementById("demo20").innerHTML = alpha.toString()
+
+
+ document.getElementById("demo21").innerHTML = alpha.splice(2, 2, "e", "f");
+ document.getElementById("demo22").innerHTML =  alpha.toString()
+
+fruits = ["Banana", "Orange", "Apple", "Mango"];
+const citrus = fruits.slice(1);
+document.getElementById("demo23").innerHTML =  citrus
+
+ citrus = fruits.slice(2, 3);
+ document.getElementById("demo24").innerHTML =  "citrus"
+
+</script>
+
+</body>
+</html>

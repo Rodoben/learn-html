@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Functions</h1>
+<h2>The Arrow Function</h2>
+
+<p>This example shows the syntax of an Arrow Function, and how to use it.</p>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script>
+let myFunction = (a, b) => a * b;
+document.getElementById("demo").innerHTML = myFunction(4, 5);
+
+
+
+//before arow functions
+let hello = "";
+
+hello = function() {
+  return "Hello World!";
+}
+
+document.getElementById("demo1").innerHTML = hello();
+
+
+hello = "";
+
+hello = () => {
+  return "Hello World!";
+}
+
+document.getElementById("demo2").innerHTML = hello();
+
+
+hello = "";
+
+hello = val => "Hello " + val;
+
+document.getElementById("demo3").innerHTML = hello("Universe!");
+</script>
+
+</body>
+</html>
